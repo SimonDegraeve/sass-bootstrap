@@ -39,10 +39,6 @@
 // it's full-width.
 
 @media (min-width: $screen-tn-min) {
-  .container {
-    width: $container-tn;
-  }
-
   @include make-grid-columns-float(tn);
   @include make-grid($grid-columns, tn, width);
   @include make-grid($grid-columns, tn, pull);
