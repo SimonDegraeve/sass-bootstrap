@@ -215,6 +215,10 @@ $screen-xs:                  480px !default;
 $screen-xs-min:              $screen-xs !default;
 $screen-phone:               $screen-xs-min !default;
 
+// Tiny screen / phone
+$screen-tn:                  480px !default;
+$screen-tn-min:              $screen-tn !default;
+
 // Small screen / tablet
 // Note: Deprecated $screen-sm and $screen-tablet as of v3.0.1
 $screen-sm:                  768px !default;
@@ -234,7 +238,8 @@ $screen-lg-min:              $screen-lg !default;
 $screen-lg-desktop:          $screen-lg-min !default;
 
 // So media queries don't overlap when required, provide a maximum
-$screen-xs-max:              ($screen-sm-min - 1) !default;
+$screen-xs-max:              ($screen-tn-min - 1) !default;
+$screen-tn-max:              ($screen-sm-min - 1) !default;
 $screen-sm-max:              ($screen-md-min - 1) !default;
 $screen-md-max:              ($screen-lg-min - 1) !default;
 
@@ -623,6 +628,10 @@ $component-offset-horizontal: 180px !default;
 
 // Container sizes
 // --------------------------------------------------
+
+// Tiny screen / mobile
+$container-mobile:             ((468px + $grid-gutter-width)) !default;
+$container-tn:                 $container-mobile !default;
 
 // Small screen / tablet
 $container-tablet:             ((720px + $grid-gutter-width)) !default;
