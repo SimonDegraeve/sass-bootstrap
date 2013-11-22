@@ -31,6 +31,26 @@
 @include make-grid($grid-columns, xs, offset);
 
 
+// Tiny grid
+//
+// Columns, offsets, pushes, and pulls for the tiny device range.
+//
+// Note that `.col-sm-12` doesn't get floated on purpose--there's no need since
+// it's full-width.
+
+@media (min-width: $screen-tn-min) {
+  .container {
+    width: $container-tn;
+  }
+
+  @include make-grid-columns-float(tn);
+  @include make-grid($grid-columns, tn, width);
+  @include make-grid($grid-columns, tn, pull);
+  @include make-grid($grid-columns, tn, push);
+  @include make-grid($grid-columns, tn, offset);
+}
+
+
 // Small grid
 //
 // Columns, offsets, pushes, and pulls for the small device range, from phones
